@@ -9,5 +9,5 @@
     $conn=new PDO($dsn,$dbuser,$dbpassword);
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    echo "connection success";
+    //echo "connection success";
 ?>

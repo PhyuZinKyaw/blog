@@ -19,5 +19,34 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+
+        <script>
+            //summer note
+            $('#description').summernote({
+                placeholder: 'Hello stand alone ui',
+                tabsize: 2,
+                height: 220,
+                toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+
+            //delete note
+            $(document).ready(function(){
+                //alert('Hello');
+                $('tbody').on('click','.delete',function(){
+                    let id=$(this).data('id');
+                    //console.log(id);
+                    $('#del_id').val(id);
+                    $('#deleteModal').modal('show');
+                })
+            });
+            </script>
     </body>
 </html>
